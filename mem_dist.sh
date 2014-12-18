@@ -2,8 +2,8 @@
 #!/bin/bash
 
 cat /proc/meminfo | grep Low | awk '{print $1 $2 / 1024 "MB"}'
-cat /proc/slabinfo | grep -v "<active_objs>" | awk '{ SUM += $2 * $4} END {print " "; print "Mem used in SLUB: " SUM / 1048576 "MB    Total"}'
-cat /proc/vmallocinfo | awk '{ SUM += $2} END { print " "; print "Mem used in Vmalloc: " SUM / 1048576 "MB    Total"}'
+cat /proc/slabinfo | grep -v "<active_objs>" | awk '{ SUM += $2 * $4} END {print " "; print "Mem used in SLUB: " SUM / 1048576 "MB "}'
+cat /proc/vmallocinfo | awk '{ SUM += $2} END { print " "; print "Mem used in Vmalloc: " SUM / 1048576 "MB "}'
 
 echo " "
 
