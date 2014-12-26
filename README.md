@@ -5,7 +5,7 @@ Shell scripts to get useful information about linux memory
 
 Sample Output:
 
-root@babu-VirtualBox:~/tools# ./mem_dist.sh 
+root@babu-VirtualBox:~/tools# ./low_mem_dist.sh 
 
 Distribution of Low Memory Allocations
 
