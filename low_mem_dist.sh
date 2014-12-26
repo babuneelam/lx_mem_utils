@@ -2,6 +2,11 @@
 
 # This shell script provides information about used up low memory: allocated by page allocator, SLUB & Vmalloc
 
+echo " "
+echo "Distribution of Low Memory Allocations"
+echo "--------------------------------------"
+echo " "
+
 cat /proc/meminfo | grep Low | awk '{print $1 $2 / 1024 "MB"}'
 cat /proc/slabinfo | grep -v "<active_objs>" | awk '{ SUM += $3 * $4} END {print " "; print "Mem allocated by SLUB: " SUM / 1048576 "MB "}'
 SLUB_total=`cat /proc/slabinfo | grep -v "<active_objs>" | awk '{ SUM += $3 * $4} END {print SUM }'`
