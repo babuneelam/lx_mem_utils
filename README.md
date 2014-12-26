@@ -8,6 +8,7 @@ Sample Output:
 root@babu-VirtualBox:~/tools# ./mem_dist.sh 
 
 Distribution of Low Memory Allocations
+
 --------------------------------------
  
 LowTotal:792.711MB
